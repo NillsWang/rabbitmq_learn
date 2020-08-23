@@ -16,6 +16,7 @@ public class Consumer {
         Connection connection = null;
         // 获取连接通道
         Channel channel = null;
+
         try {
             connection = RabbitmqUtils.getConnection();
             channel = connection.createChannel();
