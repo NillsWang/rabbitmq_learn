@@ -37,9 +37,10 @@ public class Consumer {
                 @Override
                 public void handleDelivery(String consumerTag
                         , Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+
+                    // body就是从队列中获取的数据
                     System.out.println(new String(body));
 
-                    super.handleDelivery(consumerTag, envelope, properties, body);
                 }
             });
         } catch (IOException e) {
